@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CompanyServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CompanyServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.stockfish.stockfishserver.service.html">com.stockfish.stockfishserver.service</a> &gt; CompanyServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.527s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testFindCompanies()</td>
+<td class="success">0.527s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:42:43.432 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.stockfish.stockfishserver.service.CompanyServiceTest]: CompanyServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:42:43.564 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.stockfish.stockfishserver.StockfishserverApplication for test class com.stockfish.stockfishserver.service.CompanyServiceTest
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-06-26T14:42:43.951+09:00  WARN 23776 --- [stockfishserver] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/danth/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/danth/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-06-26T14:42:43.961+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.s.service.CompanyServiceTest         : Starting CompanyServiceTest using Java 17.0.9 with PID 23776 (started by danth in D:\stockfishserver)
+2024-06-26T14:42:43.962+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.s.service.CompanyServiceTest         : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-06-26T14:42:45.031+09:00  INFO 23776 --- [stockfishserver] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-26T14:42:45.138+09:00  INFO 23776 --- [stockfishserver] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 10 JPA repository interfaces.
+2024-06-26T14:42:46.126+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-26T14:42:46.227+09:00  INFO 23776 --- [stockfishserver] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-26T14:42:46.288+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-26T14:42:46.669+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-26T14:42:46.685+09:00  INFO 23776 --- [stockfishserver] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-26T14:42:46.905+09:00  INFO 23776 --- [stockfishserver] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6843fdc4
+2024-06-26T14:42:46.908+09:00  INFO 23776 --- [stockfishserver] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-26T14:42:48.508+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table member 
+       modify column member_status enum ('ACTIVE','QUIT') not null
+Hibernate: 
+    alter table stock_order 
+       modify column order_states enum ('ORDER_COMPLETE','ORDER_WAIT') not null
+Hibernate: 
+    alter table stock_order 
+       modify column order_types enum ('BUY','SELL') not null
+2024-06-26T14:42:48.659+09:00  INFO 23776 --- [stockfishserver] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-26T14:42:49.066+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-26T14:42:49.894+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.stockfishserver.util.CustomFileUtil  : ................................
+2024-06-26T14:42:49.896+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.stockfishserver.util.CustomFileUtil  : D:\stockfishserver\upload
+2024-06-26T14:42:49.950+09:00  WARN 23776 --- [stockfishserver] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-26T14:42:50.025+09:00  INFO 23776 --- [stockfishserver] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-06-26T14:42:50.156+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7fa1c05f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6465f4a, org.springframework.security.web.context.SecurityContextHolderFilter@4a244aa3, org.springframework.security.web.header.HeaderWriterFilter@7ec53f8f, org.springframework.web.filter.CorsFilter@428b5b3f, org.springframework.security.web.authentication.logout.LogoutFilter@f4dcd0d, com.stockfish.stockfishserver.security.filter.JWTCheckFilter@687749d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a2d02d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74947f2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40def23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19a5cfb8, org.springframework.security.web.session.SessionManagementFilter@edf68f5, org.springframework.security.web.access.ExceptionTranslationFilter@e8acdfc]
+2024-06-26T14:42:50.552+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-26T14:42:51.211+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-06-26T14:42:51.212+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4211a66]]
+2024-06-26T14:42:51.214+09:00  INFO 23776 --- [stockfishserver] [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-06-26T14:42:51.241+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.s.service.CompanyServiceTest         : Started CompanyServiceTest in 7.493 seconds (process running for 8.801)
+2024-06-26T14:42:51.699+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.s.stock.service.CompanyService       : ---------------findCompanies  started----------------------------------------
+Hibernate: 
+    select
+        c1_0.company_id,
+        c1_0.code,
+        c1_0.created_at,
+        c1_0.kor_name,
+        c1_0.modified_at,
+        sab1_0.stock_as_bi_id,
+        sab1_0.askp1,
+        sab1_0.askp10,
+        sab1_0.askp2,
+        sab1_0.askp3,
+        sab1_0.askp4,
+        sab1_0.askp5,
+        sab1_0.askp6,
+        sab1_0.askp7,
+        sab1_0.askp8,
+        sab1_0.askp9,
+        sab1_0.askp_rsqn1,
+        sab1_0.askp_rsqn10,
+        sab1_0.askp_rsqn2,
+        sab1_0.askp_rsqn3,
+        sab1_0.askp_rsqn4,
+        sab1_0.askp_rsqn5,
+        sab1_0.askp_rsqn6,
+        sab1_0.askp_rsqn7,
+        sab1_0.askp_rsqn8,
+        sab1_0.askp_rsqn9,
+        sab1_0.bidp1,
+        sab1_0.bidp10,
+        sab1_0.bidp2,
+        sab1_0.bidp3,
+        sab1_0.bidp4,
+        sab1_0.bidp5,
+        sab1_0.bidp6,
+        sab1_0.bidp7,
+        sab1_0.bidp8,
+        sab1_0.bidp9,
+        sab1_0.bidp_rsqn1,
+        sab1_0.bidp_rsqn10,
+        sab1_0.bidp_rsqn2,
+        sab1_0.bidp_rsqn3,
+        sab1_0.bidp_rsqn4,
+        sab1_0.bidp_rsqn5,
+        sab1_0.bidp_rsqn6,
+        sab1_0.bidp_rsqn7,
+        sab1_0.bidp_rsqn8,
+        sab1_0.bidp_rsqn9,
+        sab1_0.company_id,
+        si1_0.stock_inf_id,
+        si1_0.acml_tr_pbmn,
+        si1_0.acml_vol,
+        si1_0.company_id,
+        si1_0.prdy_ctrt,
+        si1_0.prdy_vrss,
+        si1_0.stck_prpr 
+    from
+        company c1_0 
+    left join
+        stock_as_bi sab1_0 
+            on c1_0.company_id=sab1_0.company_id 
+    left join
+        stock_inf si1_0 
+            on c1_0.company_id=si1_0.company_id
+2024-06-26T14:42:51.786+09:00  INFO 23776 --- [stockfishserver] [    Test worker] c.s.s.stock.service.CompanyService       : ---------------findCompanies  finished [com.stockfish.stockfishserver.stock.entity.Company@4e74adb, com.stockfish.stockfishserver.stock.entity.Company@787345aa, com.stockfish.stockfishserver.stock.entity.Company@1579cf25, com.stockfish.stockfishserver.stock.entity.Company@619cdd5e, com.stockfish.stockfishserver.stock.entity.Company@2ea55742, com.stockfish.stockfishserver.stock.entity.Company@cb4999d, com.stockfish.stockfishserver.stock.entity.Company@69e0f16, com.stockfish.stockfishserver.stock.entity.Company@329e6700, com.stockfish.stockfishserver.stock.entity.Company@7e3e1b7b, com.stockfish.stockfishserver.stock.entity.Company@6860341b, com.stockfish.stockfishserver.stock.entity.Company@3610b408, com.stockfish.stockfishserver.stock.entity.Company@194971bd, com.stockfish.stockfishserver.stock.entity.Company@54ad5fce, com.stockfish.stockfishserver.stock.entity.Company@4cf2bf26]----------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.7</a> at 2024. 6. 26. 오후 2:42:51</p>
+</div>
+</div>
+</body>
+</html>

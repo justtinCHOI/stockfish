@@ -1,0 +1,1 @@
+import{j as s,I as n,M as o,C as r,c as a,O as l}from"./index-DR66x2TL.js";const u=()=>{const t=["전체종목","보유종목","관심종목","회사정보"],e=["entire","hold","watch","/stock/article/read/2"];return s.jsxs(n,{$top:5,children:[s.jsx(o,{menus:t,urls:e}),s.jsx(r,{children:s.jsx(a,{children:s.jsx(l,{})})})]})};export{u as default};

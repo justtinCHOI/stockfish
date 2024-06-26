@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: stockfishserver
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stockfishdb
+    username: stockfishuser
+    password: stockfishuser
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  servlet:
+    multipart:
+      max-request-size: 30MB
+      max-file-size: 10MB
+#  main:
+#    allow-bean-definition-overriding: true # 추가된 설정: 빈 정의 재정의 허용
+#    allow-circular-references: true        # 추가된 설정: 순환 참조 허용
+  devtools:
+    restart:
+      enabled: false # 추가된 설정: Spring Boot Devtools 재시작 비활성화
+
+logging:
+  level:
+    com:
+      zaxxer: info
+
+com:
+  stockfish:
+    upload:
+      path: upload
+
+token:
+  app-key: "PS2Gi44Ef8ltOl0rmxdJIcMwD4XDOOgBPVmS"
+  app-secret: "hPzjcvoiVp/FpiSoVJ3U/sopgsnZuVrCHJC2/okbMdOjjeTQP/umP1iABPKoDHaod2aLh9devhz8hA+7K7xCyqlHrPjHBRauO5jFc7mSbMvGy1nVPI5swH8zEocHyxulWByDzLIdDVMB4t7arxACIiwQ07zOBpktCWemOMQRSkaQqdyK3d8="
+
+stock-url:
+  token: "https://openapivts.koreainvestment.com:29443/oauth2/tokenP"
+  stockasbi: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-asking-price-exp-ccn"
+  stockhour: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice"
+  kospi: "https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/quotations/inquire-daily-indexchartprice"
