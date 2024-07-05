@@ -1,1 +1,0 @@
-import{j as e}from"./index-DYQX_Bvf.js";const t=()=>e.jsx(e.Fragment,{});function n(){return e.jsxs("div",{className:"p-4 w-full bg-white  ",children:[e.jsx("div",{className:"text-3xl font-extrabold",children:"Todo HoldingPage"}),e.jsx(t,{})]})}export{n as default};

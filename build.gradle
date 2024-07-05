@@ -88,68 +88,51 @@ compileJava.dependsOn('clean')
 //만들어진 src/main/stockfishclient/dist 안의 내용물 -> src/main/resources/static
 //를 자동화 해준다.
 
-def frontendDir = "$projectDir/src/main/stockfishclient"
-
-node {
-    version = '18.15.0'      // Node.js 버전 설정
-    npmVersion = '9.5.0'     // npm 버전 설정
-    download = true          // Node.js와 npm 다운로드 설정
-    workDir = file("${projectDir}/.gradle/nodejs")  // Node.js 작업 디렉토리
-    npmWorkDir = file("${projectDir}/.gradle/npm")  // npm 작업 디렉토리
-}
-
-//task installReact(type: NpmTask) {
-//    workingDir = file(frontendDir)  // 작업 디렉토리 설정
-//    args = ['install']              // npm install 명령어
+//def frontendDir = "$projectDir/src/main/stockfishclient"
+//
+//node {
+//    version = '18.15.0'      // Node.js 버전 설정
+//    npmVersion = '9.5.0'     // npm 버전 설정
+//    download = true          // Node.js와 npm 다운로드 설정
+//    workDir = file("${projectDir}/.gradle/nodejs")  // Node.js 작업 디렉토리
+//    npmWorkDir = file("${projectDir}/.gradle/npm")  // npm 작업 디렉토리
 //}
 //
-//task buildReact(type: NpmTask) {
-//    dependsOn installReact          // installReact 작업 후 실행
-//    workingDir = file(frontendDir)  // 작업 디렉토리 설정
-//    args = ['run', 'build']         // npm run build 명령어 (Vite 빌드)
+//sourceSets {
+//    main {
+//        resources { srcDirs = ["$projectDir/src/main/resources"]
+//        }
+//    }
+//}
+//
+//processResources { dependsOn "copyReactBuildFiles" }
+//
+//task installReact(type: Exec) {
+//    workingDir "$frontendDir"
+//    inputs.dir "$frontendDir"
+//    group = BasePlugin.BUILD_GROUP
+//    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+//        commandLine "npm.cmd", "audit", "fix"
+//        commandLine 'npm.cmd', 'install' }
+//    else {
+//        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+//    }
+//}
+//
+//task buildReact(type: Exec) {
+//    dependsOn "installReact"
+//    workingDir "$frontendDir"
+//    inputs.dir "$frontendDir"
+//    group = BasePlugin.BUILD_GROUP
+//    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+//        commandLine "npm.cmd", "run-script", "build"
+//    } else {
+//        commandLine "npm", "run-script", "build"
+//    }
 //}
 //
 //task copyReactBuildFiles(type: Copy) {
-//    dependsOn buildReact            // buildReact 작업 후 실행
-//    from "$frontendDir/dist"        // Vite 빌드 결과물 디렉토리
-//    into "$projectDir/src/main/resources/static" // Spring Boot 정적 리소스 디렉토리
+//    dependsOn "buildReact"
+//    from "$frontendDir/dist"
+//    into "$projectDir/src/main/resources/static"
 //}
-
-sourceSets {
-    main {
-        resources { srcDirs = ["$projectDir/src/main/resources"]
-        }
-    }
-}
-
-processResources { dependsOn "copyReactBuildFiles" }
-
-task installReact(type: Exec) {
-    workingDir "$frontendDir"
-    inputs.dir "$frontendDir"
-    group = BasePlugin.BUILD_GROUP
-    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
-        commandLine "npm.cmd", "audit", "fix"
-        commandLine 'npm.cmd', 'install' }
-    else {
-        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
-    }
-}
-
-task buildReact(type: Exec) {
-    dependsOn "installReact"
-    workingDir "$frontendDir"
-    inputs.dir "$frontendDir"
-    group = BasePlugin.BUILD_GROUP
-    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
-        commandLine "npm.cmd", "run-script", "build"
-    } else {
-        commandLine "npm", "run-script", "build"
-    }
-}
-
-task copyReactBuildFiles(type: Copy) {
-    dependsOn "buildReact"
-    from "$frontendDir/dist"
-    into "$projectDir/src/main/resources/static"
-}

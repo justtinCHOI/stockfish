@@ -1,1 +1,0 @@
-import{j as t}from"./index-DYQX_Bvf.js";function e(){return t.jsx(t.Fragment,{})}function n(){return t.jsxs("div",{className:"p-4 w-full bg-white  ",children:[t.jsx("div",{className:"text-3xl font-extrabold",children:"Todo ProfitPage"}),t.jsx(e,{})]})}export{n as default};
