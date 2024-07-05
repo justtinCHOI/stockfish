@@ -3,7 +3,7 @@ import {API_SERVER_HOST} from "./memberApi.jsx";
 
 const rest_api_key =`8f46337bde852c2d39573c6c60acfd65` //REST키값
 
-const redirect_uri =`http://localhost:8080/member/kakao`
+const redirect_uri =`http://localhost:5173/member/kakao`
 
 const auth_code_path = `https://kauth.kakao.com/oauth/authorize`
 

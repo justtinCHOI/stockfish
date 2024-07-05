@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.stockfish.stockfishserver.repository.MemberRepositoryTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2024-06-26T05:42:43" hostname="BOOK-G0Q92CB4JS" time="0.0">
-  <properties/>
-  <testcase name="testInsertMemberWithCash()" classname="com.stockfish.stockfishserver.repository.MemberRepositoryTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -12,6 +12,7 @@ import useCustomMove from "../../../../hooks/useCustomMove.jsx";
 const StockItem = ({ company }) => {
 
     const isPositiveChange = parseFloat(company.stockChangeRate) > 0;
+
     const logos = {
         ...logoList
     };

@@ -1,8 +1,9 @@
 package com.stockfish.stockfishserver.stock.mapper;
 
+import com.stockfish.stockfishserver.star.dto.StarResponseDto;
+import com.stockfish.stockfishserver.star.entity.Star;
 import com.stockfish.stockfishserver.stock.dto.*;
 import com.stockfish.stockfishserver.stock.entity.*;
-import lombok.extern.slf4j.Slf4j;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

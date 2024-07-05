@@ -12,23 +12,22 @@ import useGetStockInfo from '../../../../hooks/useGetStockInfo.jsx';
 // import OrderResult from './OrderResult';
 // import WaitOrderIndicator from './WaitOrderIndicator';
 
-import useCustomLogin from "../../../../hooks/useCustomLogin.jsx";
+// import useCustomLogin from "../../../../hooks/useCustomLogin.jsx";
 import {dummyLogo, logoList} from "../../../../util/companyLogos.js"
 // import {useEffect, useState} from "react";
 import StockOrder from "./StockOrder.jsx";
+import LoginRequestIndicator from "../../../common/LoginRequestIndicator.jsx";
 
 // const errorMessage = "정보를 불러올 수 없습니다";
 // const errorButtonText = "닫기";
 // const moneyRequireText = "현금 충전이 필요한 서비스입니다";
 // const moenyRequireBtnText = "현금 충전하러 가기";
 // const upperbarTitle = "주식주문";
-const loginRequiredText = "로그인이 필요한 서비스입니다";
-const loginBtnText = "StockHolm 로그인";
+// const loginBtnText = "StockFish 로그인";
 const marketType = "코스피";
 
 const BuyComponent = ({companyId}) => {
     const loginState = useSelector((state) => state.loginSlice);
-    const {moveToLogin} = useCustomLogin();
     // const {moveToManage} = useCustomCash();
 
     const isLogin = !!loginState.email;
@@ -116,10 +115,7 @@ const BuyComponent = ({companyId}) => {
                     </BuyingDiv>
                 </div>
             ) : (
-                <LoginRequestContainer>
-                    <div className="Notification">{loginRequiredText}</div>
-                    <button className="LoginButton" onClick={moveToLogin}>{loginBtnText}</button>
-                </LoginRequestContainer>
+                <LoginRequestIndicator/>
             )}
         </Container>
     );
@@ -166,32 +162,6 @@ const Container = styled.aside`
             border: none;
             border-radius: 0.5rem;
         }
-    }
-`;
-
-const LoginRequestContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
-    .Notification {
-        color: #999999;
-    }
-
-    .LoginButton {
-        width: 170px;
-        height: 32px;
-        font-size: 15px;
-        font-weight: 400;
-        color: white;
-        background-color: #2f4f4f;
-        border: none;
-        border-radius: 0.3rem;
-        cursor: pointer;
     }
 `;
 

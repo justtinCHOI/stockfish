@@ -1,55 +1,129 @@
+// import { useState } from "react";
+// import styled from "styled-components";
+// import StockItem from "./StockItem";
+// import useGetHoldingStock from "../../../../hooks/useGetHoldingStock";
+// import useCompanyData from "../../../../hooks/useCompanyData";
+// import LoginRequestIndicator from "../../../common/LoginRequestIndicator.jsx";
+// import useCustomLogin from "../../../../hooks/useCustomLogin.jsx";
+//
+// const evaluationProfitText = "평가 수익금";
+// const profitUnit = "원";
 
-import {useEffect, useState} from 'react';
-import {getList} from "../../../../api/companyApi.jsx";
-import useCustomMove from "../../../../hooks/useCustomMove.jsx";
-import PageComponent from "../../../common/PageComponent.jsx";
+const HoldingComponent = () => {
 
-const initState = {
-    dtoList : [],
-    pageNumList : [],
-    pageRequestDTO : null,
-    prev : false,
-    next : false,
-    totalCount : 0,
-    prevPage : 0,
-    nextPage : 0,
-    totalPage : 0,
-    current : 0
-}
-
-function HoldComponent() {
-    //navigate -> router -> useCustomMove -> page,size, refresh 변경 -> useEffect -> setServerData
-
-    const {page, size, refresh, moveToList, moveToRead} = useCustomMove();
-
-    const [serverData, setServerData] = useState(initState);
-
-    useEffect(() => {
-        getList({page, size}).then(data => {
-            console.log(data);
-            setServerData(data);
-        })
-
-    }, [page, size, refresh]);
+    // const isLogin = useCustomLogin();
+    //
+    // // const [isMenuOpen, setMenuOpen] = useState(false);
+    //
+    // const [showChangePrice, setShowChangePrice] = useState(false);
+    //
+    // const {stockHolds, stockHoldsLoading: isLoading, stockHoldsError: isError,
+    // } = useGetHoldingStock();
+    //
+    // const {data: companyData, isLoading: isCompanyDataLoading, isError: isCompanyDataError,
+    // } = useCompanyData(2, 15);
+    //
+    // // let totalEvaluationProfit = 0;
+    // //
+    // // if (Array.isArray(stockHolds) && stockHolds.length > 0) {
+    // //     totalEvaluationProfit = stockHolds.reduce(
+    // //         (sum, stockHold) => sum + stockHold.stockReturn,
+    // //         0
+    // //     );
+    // // }
 
     return (
-        <div className="border-2 border-blue-100 mt-10 mr-2 ml-2">
-            <div className="flex flex-wrap mx-auto justify-center p-1">
-                {serverData.dtoList.map(company =>
-                    <div key={company.companyId} className="w-full min-w-[400px] p-2 m-2 rounded shadow-md"
-                         onClick={() => moveToRead(company.companyId)}
-                    >
-                        <div className="flex w-full">
-                            <div className="font-extrabold text-2xl p-2 flex-grow">{company.companyId}</div>
-                            <div className="text-1xl m-1 p-2 flex-grow">{company.korName}</div>
-                            <div className="text-1xl m-1 p-2 flex-grow">{company.created_at}</div>
-                        </div>
-                    </div>
-                )}
-            </div>
-            <PageComponent serverData={serverData} movePage={moveToList}/>
-        </div>
+        <></>
+        // <WatchListContainer>
+        //     {/*<Header2Container>*/}
+        //     {/*    <EvaluationProfit profit={totalEvaluationProfit}>*/}
+        //     {/*        <div className="profitText">{evaluationProfitText}</div>*/}
+        //     {/*        <div className="profit">*/}
+        //     {/*            {totalEvaluationProfit.toLocaleString()} {profitUnit}*/}
+        //     {/*        </div>*/}
+        //     {/*    </EvaluationProfit>*/}
+        //     {/*</Header2Container>*/}
+        //     <StockList>
+        //         {isLogin === 0 ? (
+        //             <LoginRequestIndicator/>
+        //         ) : isLoading || isCompanyDataLoading ? (
+        //             <div></div>
+        //         ) : isError || isCompanyDataError ? (
+        //             <div>Error fetching data</div>
+        //         ) : (
+        //             Array.isArray(stockHolds) &&
+        //             stockHolds.length > 0 &&
+        //             stockHolds.map((stockHold) => {
+        //                 const matchedCompany = companyData
+        //                     ? companyData.find(
+        //                         (company) => company.companyId === stockHold.companyId
+        //                     )
+        //                     : undefined;
+        //
+        //                 return matchedCompany ? (
+        //                     <StockItem
+        //                         key={stockHold.companyId}
+        //                         stockData={stockHold}
+        //                         companyData={matchedCompany}
+        //                         setShowChangePrice={setShowChangePrice}
+        //                         showChangePrice={showChangePrice}
+        //                     />
+        //                 ) : null;
+        //             })
+        //         )}
+        //     </StockList>
+        // </WatchListContainer>
     );
-}
+};
 
-export default HoldComponent;
+export default HoldingComponent;
+//
+// const WatchListContainer = styled.div`
+//   width: 100%;
+//   height: calc(100vh - 53px);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+// `;
+//
+// // const Header2Container = styled.div`
+// //   width: 100%;
+// //   height: 43.5px;
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: center;
+// // `;
+//
+// // const EvaluationProfit = styled.div`
+// //     width: 100%;
+// //     height: 100%;
+// //     display: flex;
+// //     flex-direction: row;
+// //     align-items: center;
+// //     font-size: 0.95em;
+// //     font-weight: 570;
+// //     gap: 6.5px;
+// //     padding-left: 14px;
+// //     text-align: "center";
+// //     color: ${(props) =>
+// //             props.profit === 0 ? "#000" : props.profit > 0 ? "#e22926" : "#2679ed"};
+// //     border-bottom: 1px solid black;
+// //
+// //     .profitText {
+// //         color: black;
+// //     }
+// //
+// //     .profit {
+// //         color: #2f4f4f;
+// //     }
+// // `;
+//
+// const StockList = styled.div`
+//     height: 100%;
+//     width: 100%;
+//     overflow-y: auto;
+//
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
+// `;
