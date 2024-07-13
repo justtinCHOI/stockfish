@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { ContentBottom } from "../../../assets/css/content.jsx";
 import PropTypes from "prop-types";
+import {requestPay} from "../../../api/paymentApi.js";
+
 
 const initAccountState = {
     "cashId": '',
@@ -35,11 +37,12 @@ const ChargeComponent = ({ cashId }) => {
     };
 
     const handleCharge = () => {
-        doUpdateCash(cashId, chargedMoney, 0).then(() => {
-            setIsCharged(true);
-            setChargeAmount(0);
-            alert("충전되었습니다");
-        });
+        // doUpdateCash(cashId, chargedMoney, 0).then(() => {
+        //     setIsCharged(true);
+        //     setChargeAmount(0);
+        //     alert("충전되었습니다");
+        // });
+        requestPay()
     };
 
     const handleManage = () => {
@@ -63,18 +66,18 @@ const ChargeComponent = ({ cashId }) => {
                 </AccountRow>
                 <AccountRow>
                     <AccountLabel>충전 금액:</AccountLabel>
-                    <ChargeInput type="number" value={chargeAmount} onChange={handleChargeAmountChange} />
+                    <ChargeInput type="number" value={chargeAmount} onChange={handleChargeAmountChange}/>
                 </AccountRow>
                 <AccountRow>
                     <AccountLabel>충전 후 금액:</AccountLabel>
-                    <AccountValue style={{ color: isCharged ? 'black' : 'gray' }}>{chargedMoney}원</AccountValue>
+                    <AccountValue style={{color: isCharged ? 'black' : 'gray'}}>{chargedMoney}원</AccountValue>
                 </AccountRow>
                 <ButtonContainer>
                     <Button onClick={handleManage}>계좌 관리</Button>
-                    <Button onClick={handleCharge} >충전</Button>
+                    <Button onClick={handleCharge}>충전</Button>
                 </ButtonContainer>
             </AccountBox>
-            <ContentBottom />
+            <ContentBottom/>
         </AppContainer>
     );
 };
