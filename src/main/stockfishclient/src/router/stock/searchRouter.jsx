@@ -5,7 +5,7 @@ const Loading = <div style={{background:'#F00'}}>Loading.........</div>
 
 const SearchListPage = lazy(() => import("../../pages/stock/search/SearchListPage.jsx"));
 
-const itemRouter = () => {
+const searchRouter = () => {
     return[
         {
             path: '',
@@ -17,4 +17,4 @@ const itemRouter = () => {
     ]
 }
 
-export default itemRouter
+export default searchRouter

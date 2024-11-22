@@ -1,6 +1,6 @@
 import {useEffect, useState, useRef} from "react";
 import {FaEye, FaEyeSlash} from 'react-icons/fa';
-import useCustomLogin from "../../hooks/useCustomLogin.jsx";
+import useCustomLogin from "../../hooks/useCustomLogin.js";
 import { modifyMember, checkEmailDuplicate } from "../../api/memberApi.jsx";
 import ResultModal from "../common/ResultModal.jsx";
 import {useSelector} from "react-redux";

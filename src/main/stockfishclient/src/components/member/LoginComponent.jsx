@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import useCustomLogin from "../../hooks/useCustomLogin.jsx";
+import useCustomLogin from "../../hooks/useCustomLogin.js";
 import KakaoLoginComponent from "./KakaoLoginComponent.jsx";
 
 const initState = {

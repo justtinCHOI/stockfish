@@ -5,7 +5,7 @@ import styled from "styled-components";
 import {FaSearch} from "react-icons/fa";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
-import useCustomLogin from "../../hooks/useCustomLogin.jsx";
+import useCustomLogin from "../../hooks/useCustomLogin.js";
 
 const Home = () => {
 

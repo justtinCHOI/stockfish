@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { setStockOrderPrice } from "../../../../slices/stockOrderPriceSlice.jsx";
+import { setStockOrderPrice } from "../../../../slices/stockOrderPriceSlice.js";
 import PropTypes from "prop-types";
 
 const changeRateUnit = `%`;

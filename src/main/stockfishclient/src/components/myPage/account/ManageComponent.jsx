@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { ContentBottom } from "../../../assets/css/content.jsx";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { FaTimes } from "react-icons/fa";
-import useCustomCash from "../../../hooks/useCustomCash.jsx";
+import useCustomCash from "../../../hooks/useCustomCash.js";
 import { useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom";
 

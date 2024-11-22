@@ -24,10 +24,6 @@ public class APILoginSuccessHandler implements AuthenticationSuccessHandler {
 
         //authentication -> memberDTO -> claims -> (accessToken, refreshToken) -> (gson) jsonStr -> jsonStr
 
-        log.info("-------------------------------------");
-        log.info(authentication);
-        log.info("-------------------------------------");
-
         MemberDTO memberDTO = (MemberDTO) authentication.getPrincipal();//인증정보로부터 memberDTO 를 추출
 
         Map<String, Object> claims = memberDTO.getClaims();

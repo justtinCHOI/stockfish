@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import {Navigate} from "react-router";
 import myPageRouter from "./myPage/myPageRouter.jsx";
 import stockRouter from "./stock/stockRouter.jsx";
-import {Navigate} from "react-router";
 import memberRouter from "./myPage/memberRouter.jsx";
 
 const Loading = <div style={{ background: '#F00' }}>Loading.........</div>;
@@ -35,7 +35,8 @@ const root = createBrowserRouter([
                 path: "member",
                 element: <Suspense fallback={Loading}><MemberPage /></Suspense>,
                 children: memberRouter()
-            }]
+            }
+        ]
     }
 ]);
 

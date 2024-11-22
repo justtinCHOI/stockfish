@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {useEffect, useState} from "react";
-import useCompanyData from "../../hooks/useCompanyData.jsx";
+import useCompanyData from "../../hooks/useCompanyData.js";
 import StockOverview from "./StockOverview.jsx";
 
 const RapidSlider = () => {

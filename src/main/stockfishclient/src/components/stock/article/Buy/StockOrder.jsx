@@ -3,15 +3,15 @@ import { styled } from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useTradeStock from '../../../../hooks/useTradeStock';
+import useTradeStock from '../../../../hooks/useTradeStock.js';
 
 import StockPriceList from './StockPriceList';
 import StockOrderSetting from './StockOrderSetting';
 
 import PropTypes from "prop-types";
 import {dummyLogo, logoList} from "../../../../util/companyLogos.js";
-import {closeDecisionWindow} from "../../../../slices/decisionWindowSlice.jsx";
-import {setStockOrderVolume} from "../../../../slices/stockOrderVolumeSlice.jsx";
+import {closeDecisionWindow} from "../../../../slices/decisionWindowSlice.js";
+import {setStockOrderVolume} from "../../../../slices/stockOrderVolumeSlice.js";
 
 const orderFailureMessage01 = "주문 실패";
 const orderFailureMessage02 = "주문 수량이 없습니다";

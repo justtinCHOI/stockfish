@@ -23,10 +23,6 @@ const memberRouter = () => {
             path: "login",
             element: <Suspense fallback={Loading}><LoginPage/></Suspense>
         },
-        // {
-        //   path:"logout",
-        //   element: <Suspense fallback={Loading}><LogoutPage/></Suspense>,
-        // },
         {
             path: "kakao",
             element: <Suspense fallback={Loading}><KakaoRedirectPage/></Suspense>,

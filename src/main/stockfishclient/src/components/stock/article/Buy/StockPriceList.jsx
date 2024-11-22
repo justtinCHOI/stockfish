@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useGetStockInfo from "../../../../hooks/useGetStockInfo";
+import useGetStockInfo from "../../../../hooks/useGetStockInfo.js";
 import styled from "styled-components";
 import StockPrice from "./StockPrice";
 import {useParams} from "react-router";

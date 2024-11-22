@@ -31,11 +31,7 @@ public class JWTCheckFilter extends OncePerRequestFilter {
             return true;
         }
 
-        if (path.startsWith("/stock/item/entire/")) {
-            return true;
-        }
-
-        return false;
+        return path.startsWith("/stock/item/entire/");
     }
 
     @Override
@@ -62,32 +58,14 @@ public class JWTCheckFilter extends OncePerRequestFilter {
             //authorization 성공시 -> MemberDTO 정보를 얻어낼 수 있다.
 
             long memberId = ((Number) claims.get("memberId")).longValue();
-//            log.info("claims memberId :{}", memberId);
-
             String email = (String) claims.get("email");
-//            log.info("claims email :{}", email);
-
             String name = (String) claims.get("name");
-//            log.info("claims name :{}", name);
-
             String nickname = (String) claims.get("nickname");
-//            log.info("claims nickname :{}", nickname);
-
             String password = (String) claims.get("password");
-//            log.info("claims password :{}", password);
-
-            // Cash 객체를 LinkedHashMap에서 변환
             List<Cash> cashList = (List<Cash>) claims.get("cashList");
-//            log.info("claims cashList :{}", cashList);
-
             Boolean social = (Boolean) claims.get("social");
-//            log.info("claims social :{}", social);
-
             List<String> roleNames = (List<String>) claims.get("roleNames");
-//            log.info("claims roleNames :{}", roleNames);
-
             String status = (String) claims.get("status");
-//            log.info("claims status :{}", status);
 
             MemberDTO memberDTO = new MemberDTO(
                     memberId, email, name, nickname, password, cashList, social, roleNames, status

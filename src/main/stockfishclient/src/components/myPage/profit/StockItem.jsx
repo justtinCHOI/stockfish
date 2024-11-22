@@ -19,7 +19,7 @@ import logo from "../../../../assets/images/StockHolmImage.png";
 import star_icon from "../../../../assets/icon/star_icon.png";
 import star_filled_icon from "../../../../assets/icon/star_filled_icon.png";
 import PropTypes from "prop-types";
-import useCustomMove from "../../../hooks/useCustomMove.jsx"
+import useCustomMove from "../../../hooks/useCustomMove.js"
 
 const StockItem = ({ company }) => {
 

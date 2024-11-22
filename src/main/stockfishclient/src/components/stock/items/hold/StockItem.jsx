@@ -9,7 +9,7 @@
 // // import useDeleteStar from "../../hooks/stars/useDeletestars";
 // // import useGetStar from "../../hooks/stars/useGetstars";
 //
-// import useCustomMove from "../../../../hooks/useCustomMove.jsx";
+// import useCustomMove from "../../../../hooks/useCustomMove.js";
 // import {logoList} from "../../../../util/companyLogos.js";
 // import PropTypes from "prop-types";
 

@@ -1,9 +1,9 @@
 import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import useCustomLogin from "../../hooks/useCustomLogin.jsx";
+import useCustomLogin from "../../hooks/useCustomLogin.js";
 import {getAccessToken, getMemberWithAccessToken} from "../../api/kakaoApi.jsx";
-import {login} from "../../slices/loginSlice.jsx";
+import {login} from "../../slices/loginSlice.js";
 import {IncludeInformationDiv, OutletDiv} from "../../assets/css/menu.jsx";
 
 const KakaoRedirectPage = () => {

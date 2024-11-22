@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ResultModal from "../common/ResultModal.jsx";
 import { postAdd } from "../../api/companyApi.jsx";
-import useCustomMove from "../../hooks/useCustomMove";
+import useCustomMove from "../../hooks/useCustomMove.js";
 import {Button, ButtonRow, Container, FormRow, Input, Label} from "../../assets/css/content.jsx";
 
 const initState = {

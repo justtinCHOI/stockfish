@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import styled from "styled-components";
-import useGetCash from "../../../../hooks/useGetCash";
-import {setStockOrderVolume} from "../../../../slices/stockOrderVolumeSlice.jsx";
-import {openDecisionWindow} from "../../../../slices/decisionWindowSlice.jsx";
+import useGetCash from "../../../../hooks/useGetCash.js";
+import {setStockOrderVolume} from "../../../../slices/stockOrderVolumeSlice.js";
+import {openDecisionWindow} from "../../../../slices/decisionWindowSlice.js";
 
 const availableMoneyText01 = "최대";
 const availableMoneyText02 = "원";

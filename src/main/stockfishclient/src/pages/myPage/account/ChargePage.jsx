@@ -1,4 +1,4 @@
-import ChargeComponent from "../../../components/myPage/account/ChargeComponent.jsx";
+import ChargeComponent from "../../../components/myPage/account/charge/ChargeComponent.jsx";
 import {useParams} from "react-router";
 
 const ChargePage = () => {

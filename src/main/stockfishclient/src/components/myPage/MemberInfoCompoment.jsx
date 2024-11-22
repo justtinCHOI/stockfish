@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import useCustomMove from "../../hooks/useCustomMove.jsx";
+import useCustomMove from "../../hooks/useCustomMove.js";
 import {useEffect, useState} from "react";
 import {useSelector} from "react-redux";
 import {FaEye, FaEyeSlash} from "react-icons/fa";

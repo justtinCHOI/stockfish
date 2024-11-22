@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { useSelector } from 'react-redux';
 import { styled } from 'styled-components';
-import useGetStockInfo from '../../../../hooks/useGetStockInfo.jsx';
+import useGetStockInfo from '../../../../hooks/useGetStockInfo.js';
 // import useGetStockData from '../../../../hooks/useCustomCash';
-// import useCustomCash from "../../../../hooks/useCustomCash.jsx";
+// import useCustomCash from "../../../../hooks/useCustomCash.js";
 // import useGetStockOrderRecord from '../../../../hooks/useGetStockOrderRecord';
 // import useGetHoldingStock from '../../../../hooks/useGetHoldingStock';
 // import useGetCompanyList from '../../../../hooks/useGetCompanyList';
@@ -12,7 +12,7 @@ import useGetStockInfo from '../../../../hooks/useGetStockInfo.jsx';
 // import OrderResult from './OrderResult';
 // import WaitOrderIndicator from './WaitOrderIndicator';
 
-// import useCustomLogin from "../../../../hooks/useCustomLogin.jsx";
+// import useCustomLogin from "../../../../hooks/useCustomLogin.js";
 import {dummyLogo, logoList} from "../../../../util/companyLogos.js"
 // import {useEffect, useState} from "react";
 import StockOrder from "./StockOrder.jsx";

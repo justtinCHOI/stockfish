@@ -15,7 +15,6 @@ import java.util.Map;
 @Log4j2
 public class APILoginFailHandler implements AuthenticationFailureHandler{
 
-
   @Override
   public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
     //에러상세 Map -> (gson) jsonStr -> jsonStr

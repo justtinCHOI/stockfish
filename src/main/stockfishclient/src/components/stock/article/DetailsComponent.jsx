@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {getOne} from "../../../api/companyApi.jsx";
-import useCustomMove from "../../../hooks/useCustomMove.jsx";
+import useCustomMove from "../../../hooks/useCustomMove.js";
 import {
     Button,
     ButtonRow,

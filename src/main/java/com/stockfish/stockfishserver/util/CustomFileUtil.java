@@ -40,7 +40,6 @@ public class CustomFileUtil {
         uploadPath = tempFolder.getAbsolutePath(); // C드라이브 밑
         log.info("................................");
         log.info(uploadPath);
-
     }
 
     //상품정보가 들어올 때 저장 후 파일 이름들을 반환

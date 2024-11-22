@@ -1,8 +1,8 @@
 import { useState} from 'react';
-import useCustomMove from "../../../../hooks/useCustomMove.jsx";
+import useCustomMove from "../../../../hooks/useCustomMove.js";
 import {WatchListContainer, StockList} from "../../../../assets/css/item.jsx";
 import StockItem from "./StockItem.jsx";
-import useCompanyData from "../../../../hooks/useCompanyData.jsx";
+import useCompanyData from "../../../../hooks/useCompanyData.js";
 import {ContentBottom} from "../../../../assets/css/content.jsx";
 
 function EntireComponent() {

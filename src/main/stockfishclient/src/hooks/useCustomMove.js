@@ -3,7 +3,7 @@ import {useState} from "react";
 
 
 //파라미터 값을 통해서 각페이지로 이동하는 함수
-function UseCustomMove() {
+function useCustomMove() {
     const navigate = useNavigate()
 
     //같은 페이지를 다시 호출했을 시 리스트를 다시 로드하기 위해서
@@ -32,4 +32,4 @@ function UseCustomMove() {
 
 }
 
-export default UseCustomMove;
+export default useCustomMove;

@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import companyIdSlice from "./slices/companyIdSlice.jsx";
-import loginSlice from "./slices/loginSlice.jsx";
-import cashSlice from "./slices/cashSlice.jsx";
-import stockOrderTypeSlice from "./slices/stockOrderTypeSlice.jsx";
-import stockOrderPriceSlice from "./slices/stockOrderPriceSlice.jsx";
-import stockOrderVolumeSlice from "./slices/stockOrderVolumeSlice.jsx";
-import decisionWindowSlice from "./slices/decisionWindowSlice.jsx";
+import companyIdSlice from "./slices/companyIdSlice.js";
+import loginSlice from "./slices/loginSlice.js";
+import cashSlice from "./slices/cashSlice.js";
+import stockOrderTypeSlice from "./slices/stockOrderTypeSlice.js";
+import stockOrderPriceSlice from "./slices/stockOrderPriceSlice.js";
+import stockOrderVolumeSlice from "./slices/stockOrderVolumeSlice.js";
+import decisionWindowSlice from "./slices/decisionWindowSlice.js";
 
 
 export default configureStore({

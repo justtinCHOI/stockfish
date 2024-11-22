@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import {createCashAsync, deleteCashAsync, getCashListAsync, setCashId, updateCashAsync} from "../slices/cashSlice";
+import {createCashAsync, deleteCashAsync, getCashListAsync, setCashId, updateCashAsync} from "../slices/cashSlice.js";
 import {useNavigate} from "react-router-dom";
 
 const useCustomCash = () => {

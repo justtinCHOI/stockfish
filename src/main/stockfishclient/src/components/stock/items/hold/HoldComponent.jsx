@@ -4,7 +4,7 @@
 // import useGetHoldingStock from "../../../../hooks/useGetHoldingStock";
 // import useCompanyData from "../../../../hooks/useCompanyData";
 // import LoginRequestIndicator from "../../../common/LoginRequestIndicator.jsx";
-// import useCustomLogin from "../../../../hooks/useCustomLogin.jsx";
+// import useCustomLogin from "../../../../hooks/useCustomLogin.js";
 //
 // const evaluationProfitText = "평가 수익금";
 // const profitUnit = "원";

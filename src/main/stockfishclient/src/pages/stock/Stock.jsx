@@ -3,8 +3,6 @@ import {Outlet} from "react-router-dom";
 import StockInfoComponent from "../../components/common/StockInfoComponent.jsx";
 
 const Items = () => {
-
-
     return (
         <>
             <StockInfoComponent/>

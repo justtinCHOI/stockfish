@@ -1,6 +1,6 @@
 // import {useEffect, useState} from 'react';
 // import {getList} from "../../../../api/companyApi.jsx";
-// import useCustomMove from "../../../../hooks/useCustomMove.jsx";
+// import useCustomMove from "../../../../hooks/useCustomMove.js";
 // import PageComponent from "../../../common/PageComponent.jsx";
 // const initState = {
 //     dtoList : [],

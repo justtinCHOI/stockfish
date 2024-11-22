@@ -6,7 +6,7 @@ import {
     minusStockOrderPrice,
     plusStockOrderPrice,
     setStockOrderPrice
-} from "../../../../slices/stockOrderPriceSlice.jsx";
+} from "../../../../slices/stockOrderPriceSlice.js";
 
 const priceSettingTitle = "가격";
 const unitText = "원";

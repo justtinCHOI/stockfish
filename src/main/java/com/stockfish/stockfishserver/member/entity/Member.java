@@ -35,7 +35,6 @@ public class Member extends Auditable {
     private String password;
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL,  orphanRemoval = true, fetch = FetchType.LAZY)
-    @JsonManagedReference
     @Builder.Default
     private List<Cash> cashList = new ArrayList<>();
 

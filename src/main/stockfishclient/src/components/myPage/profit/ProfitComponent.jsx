@@ -1,5 +1,4 @@
-
-function EntireComponent() {
+function ProfitComponent() {
 
 
     return (
@@ -7,4 +6,4 @@ function EntireComponent() {
     );
 }
 
-export default EntireComponent;
+export default ProfitComponent;

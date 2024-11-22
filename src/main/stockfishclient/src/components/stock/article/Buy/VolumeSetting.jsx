@@ -6,9 +6,9 @@ import {
     minusStockOrderVolume,
     plusStockOrderVolume,
     setStockOrderVolume
-} from "../../../../slices/stockOrderVolumeSlice.jsx";
-import useGetCash from "../../../../hooks/useGetCash.jsx";
-import useGetHoldingStock from "../../../../hooks/useGetHoldingStock.jsx";
+} from "../../../../slices/stockOrderVolumeSlice.js";
+import useGetCash from "../../../../hooks/useGetCash.js";
+import useGetHoldingStock from "../../../../hooks/useGetHoldingStock.js";
 
 const volumeSettingTitle = "수량";
 const maximumVolumeText01 = "최대";

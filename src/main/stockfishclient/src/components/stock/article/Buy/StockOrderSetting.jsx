@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { orderTypeBuying, orderTypeSelling } from "../../../../slices/stockOrderTypeSlice.jsx"
+import { orderTypeBuying, orderTypeSelling } from "../../../../slices/stockOrderTypeSlice.js"
 import styled from "styled-components";
-import useGetStockInfo from "../../../../hooks/useGetStockInfo.jsx";
+import useGetStockInfo from "../../../../hooks/useGetStockInfo.js";
 import {useParams} from "react-router";
 
 import PriceSetting from "./PriceSetting";
