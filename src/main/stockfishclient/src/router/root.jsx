@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import {Navigate} from "react-router";
+import {Navigate} from "react-router-dom";
 import myPageRouter from "./myPage/myPageRouter.jsx";
 import stockRouter from "./stock/stockRouter.jsx";
 import memberRouter from "./myPage/memberRouter.jsx";
@@ -16,10 +16,11 @@ const root = createBrowserRouter([
     {
         path: '',
         element: <Suspense fallback={Loading}><BasicLayout /></Suspense>,
+        errorElement: <div>페이지를 불러오는 중 오류가 발생했습니다.</div>,
         children: [
             {
                 path: '',
-                element:  <Navigate replace={true} to='home'><Home /></Navigate>
+                element: <Navigate replace to='/home' />,
             },{
                 path: 'home',
                 element: <Suspense fallback={Loading}><Home /></Suspense>,

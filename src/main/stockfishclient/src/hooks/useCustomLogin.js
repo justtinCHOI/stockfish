@@ -1,5 +1,4 @@
 import {useNavigate} from "react-router-dom";
-import {Navigate} from "react-router";
 import {loginPostAsync, logout} from "../slices/loginSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -29,11 +28,7 @@ const useCustomLogin = ( ) => {
     navigate({pathname: '/member/login'}, {replace:true})
   }
 
-  const moveToLoginReturn = () => { //----------------------로그인 페이지로 이동 컴포넌트 // 조건부 기반
-    return <Navigate replace to="/member/login"/>
-  }
-
-  return  {loginState, isLogin, doLogin, doLogout, moveToPath, moveToLogin, moveToLoginReturn}
+  return  {loginState, isLogin, doLogin, doLogout, moveToPath, moveToLogin}
 
 }
 

@@ -2,7 +2,7 @@ import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import useCustomLogin from "../../hooks/useCustomLogin.js";
-import {getAccessToken, getMemberWithAccessToken} from "../../api/kakaoApi.jsx";
+import {getAccessToken, getMemberWithAccessToken} from "../../api/kakaoApi.js";
 import {login} from "../../slices/loginSlice.js";
 import {IncludeInformationDiv, OutletDiv} from "../../assets/css/menu.jsx";
 

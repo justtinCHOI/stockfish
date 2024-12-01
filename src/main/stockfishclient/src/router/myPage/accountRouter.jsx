@@ -1,5 +1,5 @@
 import {Suspense, lazy} from "react";
-import {Navigate} from "react-router";
+import {Navigate} from "react-router-dom";
 
 const Loading = <div>Loading....</div>
 
@@ -14,7 +14,7 @@ const accountRouter = () => {
     return [
         {
             path: '',
-            element: <Navigate replace={true} to='manage'><ManagePage/></Navigate>
+            element: <Navigate replace to='manage' />,
         },
         {
             path: "manage",

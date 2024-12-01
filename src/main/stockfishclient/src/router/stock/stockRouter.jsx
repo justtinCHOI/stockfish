@@ -14,7 +14,7 @@ const stockRouter = () => {
     return[
         {
             path: '',
-            element: <Navigate replace={true} to='items'><Items/></Navigate>
+            element: <Navigate replace={true} to='items' />,
         },{
             path: 'items',
             element: <Suspense fallback={Loading}><Items/></Suspense>,

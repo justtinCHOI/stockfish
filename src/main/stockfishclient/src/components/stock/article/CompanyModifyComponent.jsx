@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {deleteOne, getOne, putOne} from "../../../api/companyApi.jsx";
+import {deleteOne, getOne, putOne} from "../../../api/companyApi.js";
 import useCustomMove from "../../../hooks/useCustomMove.js";
 import ResultModal from "../../common/ResultModal.jsx";
 import PropTypes from "prop-types";

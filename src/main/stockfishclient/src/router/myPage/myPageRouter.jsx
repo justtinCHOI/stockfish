@@ -1,5 +1,5 @@
 import {lazy, Suspense} from "react";
-import {Navigate} from "react-router";
+import {Navigate} from "react-router-dom";
 import accountRouter from "./accountRouter.jsx";
 
 const Loading = <div style={{background:'#F00'}}>Loading.........</div>
@@ -15,7 +15,7 @@ const myPageRouter = () => {
     return[
         {
             path: '',
-            element: <Navigate replace={true} to='profit'><ProfitPage/></Navigate>
+            element: <Navigate replace to='profit' />,
         },{
             path: 'profit',
             element: <Suspense fallback={Loading}><ProfitPage/></Suspense>

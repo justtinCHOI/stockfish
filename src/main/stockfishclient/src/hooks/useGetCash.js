@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { useSelector } from "react-redux";
 import jwtAxios from "../util/jwtUtil.jsx";
-import { API_SERVER_HOST } from "../api/memberApi.jsx";
+import { API_SERVER_HOST } from "../api/memberApi.js";
 
 const host = `${API_SERVER_HOST}/api/cash`;
 

@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-/**
- * @typedef {Object} HoldingsAmountProps
- * @property {number} isLogin
- */
-
-/** @typedef {Object} Header2ContainerProps
- * @property {number} isLogin
- */
-
 export const WatchListContainer = styled.div`
   height: calc(100vh - 53px);
   display: flex;

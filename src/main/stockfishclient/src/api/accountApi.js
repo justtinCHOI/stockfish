@@ -1,5 +1,5 @@
 import jwtAxios from "../util/jwtUtil.jsx";
-import {API_SERVER_HOST} from "./memberApi.jsx";
+import {API_SERVER_HOST} from "./memberApi.js";
 
 const host = `${API_SERVER_HOST}/api/cash`
 

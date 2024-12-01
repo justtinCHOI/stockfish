@@ -34,7 +34,7 @@ public class StockMinService {
     private final StockMapper stockMapper;
     private final StockInfRepository stockInfRepository;
 
-    //모든 회사의 주식 분봉 데이터 with API -> 데이터베이스에 저장
+    // 모든 회사의 정호, 주식(StockInf, StockMin) with API -> 데이터베이스에 저장
     public void updateStockMin() throws InterruptedException {
         log.info("---------------updateStockMin  started----------------------------------------");
         List<Company> companyList = companyService.findCompanies();

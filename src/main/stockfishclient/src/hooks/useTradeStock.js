@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {useMutation, useQueryClient} from "react-query";
 import jwtAxios from "../util/jwtUtil.jsx";
-import {API_SERVER_HOST} from "../api/memberApi.jsx";
+import {API_SERVER_HOST} from "../api/memberApi.js";
 import {useParams} from "react-router";
 
 const host = `${API_SERVER_HOST}/api/stock`;

@@ -1,5 +1,5 @@
 import {useParams} from "react-router";
-import ChartComponent from "../../../components/stock/article/ChartComponent.jsx";
+import ChartComponent from "../../../components/stock/article/Chart/ChartComponent.jsx";
 
 function ChartPage() {
 

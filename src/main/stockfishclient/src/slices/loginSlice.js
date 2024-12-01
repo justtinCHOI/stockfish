@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { loginPost } from "../api/memberApi.jsx";
+import { loginPost } from "../api/memberApi.js";
 import { getLocalStorage, setLocalStorage, removeLocalStorage } from "../util/localStorageUtil.jsx";
 
 const initState = {

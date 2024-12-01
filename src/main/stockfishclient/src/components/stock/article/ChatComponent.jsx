@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import {getOne} from "../../../api/companyApi.jsx";
+import {getOne} from "../../../api/companyApi.js";
 import useCustomMove from "../../../hooks/useCustomMove.js";
 
 const initState = {

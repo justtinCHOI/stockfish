@@ -18,7 +18,7 @@ public class StockHold extends Auditable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long stockHoldId;
 
-    //Member와 연관 StockHold 엔티티 자동 삭제
+    // Member와 연관 StockHold 엔티티 자동 삭제
     @ManyToOne
     @JoinColumn(name = "MEMBER_ID")
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -32,11 +32,11 @@ public class StockHold extends Auditable {
     @Column
     private int stockCount;
 
-    //특정 조건에서 예약한 주식 수량
+    // 특정 조건에서 예약한 주식 수량
     @Column
     private int reserveStockCount;
 
-    //총 투자 금액
+    // 총 투자 금액
     @Column
     private long price;
 

@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setStockOrderVolume } from "../../reducer/StockOrderVolume-Reducer";
-import { closeDecisionWindow } from "../../reducer/SetDecisionWindow-Reducer";
+import { setStockOrderVolume } from "../../../../slices/stockOrderVolumeSlice";
+import { closeDecisionWindow } from "../../../../slices/decisionWindowSlice";
 import { styled } from "styled-components";
 import { toast } from "react-toastify";
-import useTradeStock from "../../hooks/useTradeStock";
+import useTradeStock from "../../../../hooks/useTradeStock";
 
 import StockPriceList from "./StockPriceList";
 import StockOrderSetting from "./StockOrderSetting";
 
 // dummyData
 import {dummyLogo, logoList} from "../../../../util/companyLogos.js";
+import PropTypes from "prop-types";
 
 const orderFailureMessage01 = "주문 실패";
 const orderFailureMessage02 = "주문 수량이 없습니다";
@@ -27,6 +28,10 @@ const cancelButtonText = "취소";
 const confirmButtonText = "확인";
 
 const toastText = " 요청이 완료되었습니다";
+
+StockOrder.propTypes = {
+    corpName: PropTypes.string
+};
 
 const StockOrder = ({ corpName }) => {
     const dispatch = useDispatch();

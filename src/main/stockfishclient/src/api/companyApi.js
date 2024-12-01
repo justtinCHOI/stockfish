@@ -1,4 +1,4 @@
-import {API_SERVER_HOST} from "./memberApi.jsx";
+import {API_SERVER_HOST} from "./memberApi.js";
 import jwtAxios from "../util/jwtUtil.jsx";
 
 const prefix = `${API_SERVER_HOST}/api/company`

@@ -7,7 +7,8 @@ import PropTypes from "prop-types";
 const changeRateUnit = `%`;
 
 const StockPrice = (props) => {
-    const { index, price, volume, changeRate, totalSellingVolume, totalBuyingVolume } = props;
+    // const { index, price, volume, changeRate, totalSellingVolume, totalBuyingVolume } = props;
+    const { index, price, volume, changeRate } = props;
 
     const dispatch = useDispatch();
     const orderPrice = useSelector((state) => state.stockOrderPriceSlice);

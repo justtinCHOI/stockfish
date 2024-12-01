@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useCustomLogin from "../../hooks/useCustomLogin.js";
 const loginRequiredText = "로그인이 필요한 서비스입니다";
+const loginBtnText = "StockHolm 로그인";
 
 const LoginRequestIndicator = () => {
     const {moveToLogin} = useCustomLogin();

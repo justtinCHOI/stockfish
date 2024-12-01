@@ -1,5 +1,5 @@
 import {Suspense, lazy} from "react";
-import {Navigate} from "react-router";
+import {Navigate} from "react-router-dom";
 
 
 const Loading = <div>Loading....</div>
@@ -10,14 +10,14 @@ const LoginPage = lazy(() => import("../../pages/member/LoginPage.jsx"))
 
 const KakaoRedirectPage = lazy(() => import("../../pages/member/KakaoRedirectPage.jsx"))
 
-const ModifyPage = lazy(() => import("../../pages/myPage/ModifyPage.jsx"))
+// const ModifyPage = lazy(() => import("../../pages/myPage/ModifyPage.jsx"))
 
 const memberRouter = () => {
 
     return [
         {
             path: '',
-            element: <Navigate replace={true} to='modify'><ModifyPage/></Navigate>
+            element: <Navigate replace={true} to='login' />,
         },
         {
             path: "login",

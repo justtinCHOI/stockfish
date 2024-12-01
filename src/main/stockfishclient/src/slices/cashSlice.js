@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {createCash, deleteCash, getCashList, updateCash} from "../api/accountApi.jsx";
+import {createCash, deleteCash, getCashList, updateCash} from "../api/accountApi.js";
 import {getLocalStorage, setLocalStorage} from "../util/localStorageUtil.jsx"; // localStorage 유틸리티 파일로 변경
 
 const LOCAL_STORAGE_KEY = 'cashState';
@@ -31,10 +31,6 @@ export const deleteCashAsync = createAsyncThunk('deleteCashAsync', async (cashId
 });
 
 export const updateCashAsync = createAsyncThunk('updateCashAsync', async ({ cashId, money, dollar }) => {
-    console.log("updateCashAsync cashId : ", cashId);
-    console.log("updateCashAsync money : ", money);
-    console.log("updateCashAsync dollar : ", dollar);
-
     return await updateCash(cashId, money, dollar);
 });
 

@@ -1,15 +1,20 @@
-import {RouterProvider} from "react-router";
+import { RouterProvider } from "react-router-dom";
 import root from "./router/root.jsx";
-// import {ReactQueryDevtools} from "react-query/devtools";
-import {QueryClient, QueryClientProvider} from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
+import ErrorBoundary from "./components/ErrorBoundary/index.jsx";
+import { Suspense } from "react";
 
+// QueryClient 인스턴스 생성
 const queryClient = new QueryClient();
 
 function App() {
     return (
         <QueryClientProvider client={queryClient}>
-            <RouterProvider router={root}/>
-            {/*<ReactQueryDevtools initialIsOpen={true}></ReactQueryDevtools>*/}
+            <ErrorBoundary>
+                <Suspense fallback={<div>로딩 중...</div>}>
+                    <RouterProvider router={root} />
+                </Suspense>
+            </ErrorBoundary>
         </QueryClientProvider>
     );
 }

@@ -53,12 +53,11 @@ public class CompanyController {
 
     // 차트 하나 호출
     @GetMapping("/charts/{companyId}")
-    public ResponseEntity getCompanyChart(@PathVariable("companyId") long companyId) {
+    public ResponseEntity<List<StockMinResponseDto>> getCompanyChart(@PathVariable("companyId") long companyId) {
         List<StockMinResponseDto> stockMinList = stockMinService.getRecent420StockMin(companyId);
 
-        return new ResponseEntity(stockMinList, HttpStatus.OK);
+        return new ResponseEntity<>(stockMinList, HttpStatus.OK);
     }
-    //http://localhost:8080/stock/article/buy/1
 
     //회사 수정
     @PutMapping("/{companyId}")
@@ -70,41 +69,3 @@ public class CompanyController {
     }
 
 }
-//    private final CompanyService companyService;
-//
-//    @GetMapping("/{companyId}")
-//    public CompanyDTO get(@PathVariable Long companyId) {
-//        return companyService.get(companyId);
-//    }
-//
-//    @GetMapping("/list")
-//    public PageResponseDTO<CompanyDTO> list(PageRequestDTO pageRequestDTO) {
-//        log.info("list..................." + pageRequestDTO);
-//
-//        return companyService.getList(pageRequestDTO);
-//    }
-//
-//    @PostMapping("/")
-//    public Map<String, Long> register(@RequestBody CompanyDTO dto) {
-//        log.info("companyDTO: " + dto);
-//
-//        Long companyId = companyService.register(dto);
-//
-//        return Map.of("companyId", companyId);
-//    }
-//
-//    @PutMapping("/{companyId}")
-//    public Map<String, String> modify(@PathVariable("companyId") Long companyId,
-//                                      @RequestBody CompanyDTO companyDTO) {
-//        companyDTO.setCompanyId(companyId);
-//
-//        companyService.modify(companyDTO);
-//        return Map.of("RESULT", "SUCCESS");
-//    }
-//
-//    @DeleteMapping("/{companyId}")
-//    public Map<String, String> remove(@PathVariable("companyId") Long companyId) {
-//        companyService.remove(companyId);
-//
-//        return Map.of("RESULT", "SUCCESS");
-//    }

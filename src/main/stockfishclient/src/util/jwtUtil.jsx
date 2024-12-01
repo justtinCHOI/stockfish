@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getLocalStorage, setLocalStorage } from "./localStorageUtil.jsx"; // localStorage 유틸리티 파일로 변경
-import { API_SERVER_HOST } from "../api/memberApi.jsx";
+import { API_SERVER_HOST } from "../api/memberApi.js";
 
 const jwtAxios = axios.create();
 

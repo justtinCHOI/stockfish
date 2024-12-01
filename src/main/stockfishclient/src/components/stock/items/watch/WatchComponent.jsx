@@ -1,5 +1,5 @@
 // import {useEffect, useState} from 'react';
-// import {getList} from "../../../../api/companyApi.jsx";
+// import {getList} from "../../../../api/companyApi.js";
 // import useCustomMove from "../../../../hooks/useCustomMove.js";
 // import PageComponent from "../../../common/PageComponent.jsx";
 // const initState = {

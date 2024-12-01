@@ -1,5 +1,5 @@
 import axios from "axios";
-import {API_SERVER_HOST} from "./memberApi.jsx";
+import {API_SERVER_HOST} from "./memberApi.js";
 
 const rest_api_key =`8f46337bde852c2d39573c6c60acfd65` //REST키값
 
@@ -7,7 +7,7 @@ const redirect_uri =`http://localhost:5173/member/kakao`
 
 const auth_code_path = `https://kauth.kakao.com/oauth/authorize`
 
-const access_token_url =`https://kauth.kakao.com/oauth/token` //추가 
+const access_token_url =`https://kauth.kakao.com/oauth/token` //추가
 
 //1. 인가코드 얻기
 export const getKakaoLoginLink = () => {
@@ -32,7 +32,7 @@ export const getAccessToken = async (authCode) => {
     redirect_uri: redirect_uri,
     code:authCode
   }
-  
+
   const res = await axios.post(access_token_url, params , header)
 
   return res.data.access_token

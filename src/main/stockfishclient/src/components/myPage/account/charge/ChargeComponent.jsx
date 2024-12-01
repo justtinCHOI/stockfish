@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
-import useCustomCash from "../../../hooks/useCustomCash.js";
+// import useCustomCash from "../../../hooks/useCustomCash.js";
+import useCustomCash from "../../../../hooks/useCustomCash.js"
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import { ContentBottom } from "../../../assets/css/content.jsx";
+import { ContentBottom } from "../../../../assets/css/content.jsx";
 import PropTypes from "prop-types";
-import {requestPay} from "../../../api/paymentApi.js";
+import {requestPay} from "../../../../api/paymentApi.js";
 
 
 const initAccountState = {

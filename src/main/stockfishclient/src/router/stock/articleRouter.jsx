@@ -1,11 +1,11 @@
 import {lazy, Suspense} from "react";
-import {Navigate} from "react-router";
+import {Navigate} from "react-router-dom";
 import CompanyModifyPage from "../../pages/stock/article/CompanyModifyPage.jsx";
 const Loading = <div style={{background:'#007cff'}}>Loading.........</div>
 
 const ChartPage = lazy(() => import("../../pages/stock/article/ChartPage.jsx"));
 const BuyPage = lazy(() => import("../../pages/stock/article/BuyPage.jsx"));
-const SellPage = lazy(() => import("../../pages/stock/article/SellPage.jsx"));
+// const SellPage = lazy(() => import("../../pages/stock/article/SellPage.jsx"));
 const DetailsPage = lazy(() => import("../../pages/stock/article/DetailsPage.jsx"));
 const NewsPage = lazy(() => import("../../pages/stock/article/NewsPage.jsx"));
 const ChatPage = lazy(() => import("../../pages/stock/article/ChatPage.jsx"));
@@ -14,7 +14,7 @@ const articleRouter = () => {
     return[
         {
             path: '',
-            element: <Navigate replace={true} to='chart'><ChartPage/></Navigate>
+            element: <Navigate replace to='chart' />,
         },{
             path: 'chart/:companyId',
             element: <Suspense fallback={Loading}><ChartPage/></Suspense>,

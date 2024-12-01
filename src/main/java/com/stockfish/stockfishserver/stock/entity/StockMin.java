@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class StockMin {
+public class StockMin { // 회사 분봉 데이터
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long stockMinId;
@@ -20,27 +20,32 @@ public class StockMin {
     @JoinColumn(name = "COMPANY_ID")
     private Company company;
 
-    //주식 체결 시간(LocalDateTime)
+    // 주식 체결 시간
     @Column
     private LocalDateTime stockTradeTime;
 
-    //주식 체결 시간(문자열)
+    // 주식 체결 시간
     @Column
     private String stck_cntg_hour;
-    //주식 현재가
+
+    // 주식 현재가
     @Column
     private String stck_prpr;
-    //주식 시가
+
+    // 주식 시가
     @Column
     private String stck_oprc;
+
+    // 주식 최고가
     @Column
-    //주식 최고가
     private String stck_hgpr;
+
+    // 주식 최저가
     @Column
-    //주식 최저가
     private String stck_lwpr;
+
+    // 체결 거래량
     @Column
-    //체결 거래량
     private String cntg_vol;
 
     //stck_cntg_hour(문자열) -> stockTradeTime(LocalDateTime)
