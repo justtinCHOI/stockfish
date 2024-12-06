@@ -3,13 +3,14 @@ import { styled } from "styled-components";
 import EChartsReact from "echarts-for-react";
 
 import useGetStockData from "../../../../hooks/useGetStockData";
-import useGetStockChart from "../../../../hooks/useGetStockChart";
+import useGetStockChart from "../../../../hooks/useGetStockChart.js";
 
 const loadingText = "로딩 중 입니다...";
 const errorText = "화면을 불러올 수 없습니다";
 
-const StockChart = () => {
+const ChartComponent = () => {
     // const companyId = useSelector((state: StateProps) => state.companyId);
+
     const companyId = useSelector((state) => state.companyId);
 
     const { stockPriceLoading, stockPriceError } = useGetStockData(companyId); // 봉 420개를 가져올 수 있는데 왜 안씀
@@ -33,7 +34,7 @@ const StockChart = () => {
     );
 };
 
-export default StockChart;
+export default ChartComponent;
 
 const Container = styled.div`
   position: relative;
